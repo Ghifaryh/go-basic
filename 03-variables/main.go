@@ -88,4 +88,45 @@ func demoConstant() {
 	var radius float64 = 7.0
 	luasLingkaran := phi * radius * radius
 	fmt.Printf("Luas Lingkaran dengan jari-jari %.2f adalah %.2f\n", radius, luasLingkaran)
+
+}
+
+func demoTipeData() {
+	fmt.Println("4. Tipe Data Dasar di Go")
+
+	// Integer
+	var a int = 10
+	var b int8 = 20
+	var c int16 = 30
+	var d int32 = 40
+	var e int64 = 50
+
+	fmt.Printf("Tipe Data a:  %T\n", a)
+	fmt.Printf("Tipe Data b: -128 - 127  %T\n", b)
+	fmt.Printf("Tipe Data c: -32768 - 32767 %T\n", c)
+	fmt.Printf("Tipe Data d: -2147483648 - 2147483647 %T\n", d)
+	fmt.Printf("Tipe Data e: < 2147483648 %T\n", e)
+
+	// Float
+	var f float64 = 3.14
+	var g float32 = 6.28
+
+	fmt.Printf("Tipe Data f: %T\n", f)
+	fmt.Printf("Tipe Data g: %T\n", g)
+
+	// String
+	var h string = "Hello, Go!"
+	fmt.Printf("Tipe Data h: %T\n", h)
+
+	// Boolean
+	var lulus bool = true
+	fmt.Printf("Status Lulus: %t\n", lulus)
+
+	// Type safe, penjumlahan ini akan error
+	var x int = 10
+	var y float32 = 20.5
+	// z:= x + y // Error: mismatched types int and float32
+
+	z := float32(x) + y
+	fmt.Printf("Hasil Penjumlahan: %.2f\n", z)
 }
