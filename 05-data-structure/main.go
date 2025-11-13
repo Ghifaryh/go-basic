@@ -74,5 +74,4 @@ func demonstrasiMap() {
 		"Gip":    30,
 	}
 	fmt.Printf("Map: %v\n", mapIntegerString)
-
 }
